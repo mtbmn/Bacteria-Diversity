@@ -1,0 +1,84 @@
+.jumbotron {
+    background-image: url('../images/bacteria.jpg');
+}
+
+body {
+    background-color: #c7b5a3;
+    font-size: 13pt;
+    line-height: 1.65;
+}
+
+h1 {
+    background-color: rgba(0,0,0,.5);
+    color: #f7f2eb !important;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    font-size: 13pt;
+}
+
+h3 {
+    font-size: 11pt;
+}
+
+#subtitle {
+    background-color: rgba(0,0,0,.5);
+    color: #f7f2eb !important;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.dark-theme {
+    background-color: #403c36;
+    color: #f7f2eb !important;
+}
+
+.panel-heading {
+    background-color: yellowgreen !important;
+    border-bottom: 1px solid #f7f2eb !important;
+    color: #403c36 !important;
+}
+
+.smooth-corners {
+    border-radius: 2em !important;
+    overflow: hidden;
+    border: 1px solid #f7f2eb;
+}
+
+select {
+    color: #403c36;
+    background-color: yellowgreen !important;
+}
+
+.descriptor {
+    border-radius: 2em !important;
+    border: 1px solid #f7f2eb;
+    padding: .5em 1em;
+    margin: .5em;
+    background-color: #77e6cc;
+    color: #403c36;
+}
+
+#introduction {
+    padding: .5em 1em !important;
+}
+
+#partcipant-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#bar-bubble {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#bar {
+    max-width: calc(95vw);
+}
+
+#gauge {
+    max-width: calc(95vw);
+}

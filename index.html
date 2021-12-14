@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<!-- Bacteria header image from: https://all-free-download.com/free-photos/download/koli_bacteria_escherichia_coli_bacteria_239095_download.html -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="assets/css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center smooth-corners">
+        <h1>Bellybutton Biodiversity Dashboard</h1>
+        <p id="subtitle">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+
+    <div class="row smooth-corners dark-theme" id="introduction">
+        <p class="col-md-12">
+          The dataset displayed here characterizes the bacterial species that colonize
+          different individual's bellybuttons.  Microbiology biological
+          researcher Roza hypothesizes there is a species of bacteria in the
+          bellybutton which produces compounds that will produce the perfect
+          meaty flavor for imitation beef.  To start testing this hypothesis,
+          Roza swabbed the bellybuttons of participants and cultured them to
+          quantify which species inhabit different participants and in what
+          abundance these species were found.  If a species that produces a meaty
+          flavor is later discovered, this dashboard will allow participants in the study to
+          look up their participant ID to discover what species colonize their
+          bellybuttons and whether their microflora could be sold to produce
+          imitation beef.
+        </p>
+    </div>
+
+    <br>
+
+
+    <div class="row">
+      <div id="partcipant-info" class="col-md-2">
+
+        <div class="well dark-theme smooth-corners">
+          <h2>Participant ID:</h2>
+          <select id="selDataset" class="form-control" onchange="optionChanged(this.value)"></select>
+        </div>
+
+        <div id="demography-holder" class="panel panel-primary dark-theme smooth-corners">
+          <div class="panel-heading">
+            <h2 class="panel-title">Demographic Info</h2>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      
+
+      <div id="bar-bubble" class="smooth-corners dark-theme">
+        <div class="col-md-5">
+          <div id="bar"></div>
+          <p class="descriptor">
+            Colony counts for the ten most populous bacterial species found in
+            an individual's bellybutton.  Classification information is
+            displayed for a specific bar on hover.
+          </p>
+        </div>
+
+  
+        <div class="col-md-5">
+          <div id="gauge"></div>
+          <p class="descriptor">
+            The self-reported number of times an individual washed their
+            bellybutton per week.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    
+    <div class="row">
+      <div class="col-md-12 dark-theme smooth-corners">
+        <div id="bubble"></div>
+        <p class="descriptor">
+          Abundance of all found bacterial species in an individual’s bellybutton.
+          Larger bubbles higher on the chart represent species that
+          produced larger colony counts.  Species are sorted but OTU, so species
+          that are closer together along the x axis are assumed to be more
+          closely related.  Classification information is displayed for a
+          specific bubble on hover.
+        </p>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
